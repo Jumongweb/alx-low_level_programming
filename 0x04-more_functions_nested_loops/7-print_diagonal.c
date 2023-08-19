@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * print_diagonal - a function that draw a diagonal line
- * @n: the parameter to check the last digit
+ * @n: parameter to be check
  *
- * Return: always 0
+ * Return: 0 success
  */
 
 void print_diagonal(int n)
