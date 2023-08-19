@@ -2,6 +2,7 @@
 /**
  * print_diagonal - a function that draw a diagonal line
  * @n: the parameter to check the last digit
+ *
  * Return: always 0
  */
 
