@@ -8,7 +8,7 @@
  * @n: number of argument.
  * @...: variable.
  *
- * Return: 0 always 
+ * Return: 0 always
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
