@@ -2,7 +2,6 @@
 /**
  * binary_to_unit - a function that converts a binary number
  * to an unsigned int
- * @x: pointer to string
  * @y: input value
  *
  * Return: the converted number
