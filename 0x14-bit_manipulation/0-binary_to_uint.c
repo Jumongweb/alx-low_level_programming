@@ -1,28 +1,50 @@
 #include "main.h"
+
 /**
  * binary_to_unit - a function that converts a binary number
  * to an unsigned int
- * @y: input value
+ * @a: input value
+ * @b: input value
  *
- * Return: the converted number
+ * Return: 0 always
  */
 
-unsigned int binary_to_uint(const char *y)
+int _pow(int a, int b)
 {
-	unsigned int leng, a, b, sum, pow;
-	int base;
+	int i, sum = 0;
 
-	base = 2;
-	sum = 0;
-	pow = 1;
+	for (i = 0; i < b; i++)
+		sum *= a;
+	return (sum);
+}
 
-	if (b == NULL)
+/**
+ * binary_to_uint - convert a binary to unsigned int
+ * @b: string contains 0's and 1's
+ *
+ * Return: 0 always
+*/
+
+unsigned int binary_to_uint(const char *b)
+{
+	int digit, index, total = 0;
+
+	if (!b)
 		return (0);
-	for (leng = 0; b[leng] != '\0'; leng++)
-		;
-	if (leng == 1 && (b[0] == '0' || b[0] == '1'))
-		return (b[0] - 48);
-	
+	index = (strlen(b) - 1);
+	while (*b)
+	{
+		digit = (*b) - '0';
+		if (digit == 0 || digit == 1)
+		{
+			total += (_pow(2, index)) * digit;
+			index--;
+			b++;
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	return (value);
+	return ((unsigned int) total);
 }
