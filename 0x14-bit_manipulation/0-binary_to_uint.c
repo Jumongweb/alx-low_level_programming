@@ -9,16 +9,20 @@
 
 unsigned int binary_to_uint(const char *y)
 {
-	unsigned int value = 0;
-	int x;
+	unsigned int leng, a, b, sum, pow;
+	int base;
 
-	if (!y)
+	base = 2;
+	sum = 0;
+	pow = 1;
+
+	if (b == NULL)
 		return (0);
-	for (x = 0; y[x]; y++)
-	{
-		if (y[x] < '0' || y[x] > '1')
-			return (0);
-	value = 2 * value + (y[x] - '0');
+	for (leng = 0; b[leng] != '\0'; leng++)
+		;
+	if (leng == 1 && (b[0] == '0' || b[0] == '1'))
+		return (b[0] - 48);
+	
 	}
 	return (value);
 }
